@@ -12,6 +12,9 @@ const apiClient = axios.create({
 export default {
   getEvents() {
     return apiClient.get('/events') // gets the baseURL and adds /events at the end
+  },
+  getEvent(id) {
+    return apiClient.get('/events/' + id)
   }
 }
 
